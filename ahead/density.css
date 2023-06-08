@@ -147,3 +147,39 @@ ul.progress-bar li::after {
     width: 5px;
     height: 100vh;
 }
+
+/* sun bar css */
+.sun {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: relative;
+    /* left: 12%; */
+    margin-left: 25%;
+    background: radial-gradient(#e9c37b 30%, transparent 40%);
+}
+.sun::before {
+    content: "";
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #d38e4c;
+} 
+.sun::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 145%;
+    width: 140%;
+    height: 3px;
+    border: 3px dotted #d38e4c;
+} 
+
+.text-container {
+    text-align: center;
+    margin-top: 20px;
+}
