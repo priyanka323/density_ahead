@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: #0d0c22;
+}
+
+.sub-dashboard {
+    margin-bottom: 50px;
+    border-radius: 15px;
+    padding: 20px;
+    height: 90vh;
+}
+
+.sub-dashboard div {
+    margin-left: 20px;
+}
+
+#appInfo {
+    background: radial-gradient(#efe8fe, #ece6fd);
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+#appInfo div {
+    margin-left: 30px;
+}
+
+#heading {
+    font-size: 50px;
+}
+
+.sliding-container {
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+}
+
+.sliding-item {
+    flex: 0 0 25%;
+    /* Adjust this value as per your desired spacing */
+    padding: 20px;
+    margin: 15px;
+    border-radius: 20px;
+    animation: slide 5s infinite linear;
+}
+
+.rotated {
+    transform: rotate(28deg);
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Additional styling for emoji, heading, and description */
+.emoji {
+    font-size: 32px;
+}
+
+h3 {
+    margin-top: 10px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+#sliding-text {
+    opacity: 0;
+    font-size: 10px;
+    transform: translateX(-100%);
+    transition: opacity 1.5s, transform 1.5s;
+}
+
+.appear {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+}
+
+#meetApp {
+    background-color: #fef6f0;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+ul.progress-bar {
+    height: 80vh;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+ul.progress-content{
+    height: 80vh;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+ul.progress-bar::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 5px;
+    background: #ac9ee7;
+    width: 5px;
+    height: 100vh;
+}
+
+ul.progress-bar li{
+    background: #6542ee;
+    border-radius: 100px;
+    width: 15px;
+    height: 15px;
+    z-index: 1;
+    position: relative;
+}
+
+ul.progress-bar li.stop~li {
+    background: #9783e8;
+}
+
+ul.progress-bar li.stop~li::after {
+    height: 0;
+}
+
+ul.progress-bar li::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+    background: linear(#6542ee,#b1a0f3);
+    width: 5px;
+    height: 100vh;
+}
